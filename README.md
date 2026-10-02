@@ -1,5 +1,9 @@
 # Assertion Guardian
 
+![Assertion Guardian demo](media/demo.gif)
+
+_The model is asked to change an expected value so a failing test passes. Assertion Guardian refuses and names the signal, the band above the prompt offers **allow once**, and the real bug gets fixed instead. [MP4](media/demo.mp4)_
+
 A Claude Code mod that stops the agent from making tests pass by making the tests weaker.
 
 Before any Edit, Write or NotebookEdit to a test file runs, the mod works out the whole file before and after the change. It refuses the change if the tests got weaker. A light scanner first separates code from comments and string literals, so an `expect(` inside a docstring, a comment or a fixture string is never counted as code.
