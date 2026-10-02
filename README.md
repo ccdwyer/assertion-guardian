@@ -67,6 +67,14 @@ Engine calls it makes: `$.command.register`, `$.fs.exists (via previous)`, `$.fs
 
 A `tool.call` hook sits in the middle of every tool call: it can see the call, refuse it, or add context to its result. This mod uses that only for the behaviour described above.
 
+## Privacy
+
+It runs entirely on your machine. It sends nothing over the network. It runs `git` locally to read the previous version of a test file.
+
+The mod collects no analytics or telemetry, and its author receives no data from it.
+
+Full policy: [PRIVACY.md](PRIVACY.md).
+
 ## License
 
 MIT
