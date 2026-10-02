@@ -8,5 +8,9 @@
     "url": "https://github.com/ccdwyer"
   },
   "repository": "https://github.com/ccdwyer/assertion-guardian",
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://github.com/ccdwyer/assertion-guardian",
+  "supportUrl": "https://github.com/ccdwyer/assertion-guardian/issues",
+  "documentationUrl": "https://github.com/ccdwyer/assertion-guardian#readme",
+  "privacyPolicyUrl": "https://github.com/ccdwyer/assertion-guardian/blob/main/PRIVACY.md"
 }
