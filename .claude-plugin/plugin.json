@@ -1,0 +1,11 @@
+{
+  "name": "assertion-guardian",
+  "version": "0.1.0",
+  "description": "Blocks edits that weaken tests to fake a green run: removed or loosened assertions, added skips, deleted cases, swallowed errors, snapshot rewrites",
+  "types": "./types/index.d.ts",
+  "author": {
+    "name": "Chris Dwyer",
+    "url": "https://github.com/ccdwyer"
+  },
+  "repository": "https://github.com/ccdwyer/assertion-guardian"
+}

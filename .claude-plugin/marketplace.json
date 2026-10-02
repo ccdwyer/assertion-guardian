@@ -1,0 +1,13 @@
+{
+  "name": "assertion-guardian",
+  "owner": {
+    "name": "Chris Dwyer"
+  },
+  "plugins": [
+    {
+      "name": "assertion-guardian",
+      "source": "./",
+      "description": "Blocks edits that weaken tests to fake a green run: removed or loosened assertions, added skips, deleted cases, swallowed errors, snapshot rewrites"
+    }
+  ]
+}
