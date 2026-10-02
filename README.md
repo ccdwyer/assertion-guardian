@@ -2,7 +2,7 @@
 
 ![Assertion Guardian demo](media/demo.gif)
 
-_The model is asked to change an expected value so a failing test passes. Assertion Guardian refuses and names the signal, the band above the prompt offers **allow once**, and the real bug gets fixed instead. [MP4](media/demo.mp4)_
+_The model is asked to change an expected value so a failing test passes. Assertion Guardian refuses and names the signal, the band above the prompt offers **allow once**, and the real bug gets fixed instead. [MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/assertion-guardian.mp4)_
 
 A Claude Code mod that stops the agent from making tests pass by making the tests weaker.
 
@@ -53,3 +53,20 @@ Test files are recognised by `*.test.*`, `*.spec.*`, `test_*.py`, `tests.py`, `*
 claude plugin validate .
 claude plugin test .
 ```
+
+## What it hooks
+
+Events this mod hooks, as `claude plugin validate` reads the module:
+
+- `session.start`
+- `command.run{command=allow-test-change}`
+- `tool.call`
+- `ui.render{component=AbovePrompt}`
+
+Engine calls it makes: `$.command.register`, `$.fs.exists (via previous)`, `$.fs.read (via previous)`, `$.process.run (via previous)`, `$.state.get`, `$.state.set`, `$.ui.resolve`.
+
+A `tool.call` hook sits in the middle of every tool call: it can see the call, refuse it, or add context to its result. This mod uses that only for the behaviour described above.
+
+## License
+
+MIT
